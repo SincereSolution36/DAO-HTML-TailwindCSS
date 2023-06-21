@@ -1,0 +1,192 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+	line-height: 1.5;
+	-webkit-text-size-adjust: 100%;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+	font-family: DM-Sans, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+	font-feature-settings: normal
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	@apply font-dm;
+}
+
+p {
+	@apply font-time;
+}
+
+.bg-radial-gradient-orange {
+	background-image: radial-gradient(ellipse at 128.38% -33.33%, #cb91b7 0, #d1805c 100%);
+}
+
+.bg-radial-gradient-red {
+	background-image: radial-gradient(ellipse at 128.38% -33.33%, #8458b3 0, #d1805c 100%);
+}
+
+.bg-radial-gradient-purple {
+	background-image: radial-gradient(ellipse at 127.61% -56.94%, #8041e6 43.23%, #564cf8 100%);
+}
+
+.min-w-sidebar {
+	min-width: 250px;
+}
+
+.min-w-trade-sidebar {
+	min-width: 300px;
+}
+
+.w-subnav-menu {
+	width: 200px;
+}
+
+.w-trade-sidebar {
+	width: 300px;
+}
+
+.w-market-orders {
+	width: 235px;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+	display: none
+}
+
+/* Collapse style */
+.collapse-toggler+div {
+	transition: max-height .3s, opacity .3s, visibility .3s;
+}
+
+.collapse-toggler:not(.open)+div {
+	max-height: 0;
+	opacity: 0;
+	visibility: hidden;
+}
+
+.collapse-toggler.open+div {
+	max-height: 200vh;
+}
+
+.collapse-toggler.open>span.trigger:nth-of-type(2) {
+	display: none;
+}
+
+.collapse-toggler:not(.open)>span.trigger:first-of-type {
+	display: none;
+}
+
+/* Tab Style */
+.pc-tab section>div,
+.pc-tab .right-trade-bar .tab5,
+.pc-tab .right-trade-bar .tab6 {
+	display: none;
+}
+
+#tab1:checked~section .tab1,
+#tab2:checked~section .tab2,
+#tab3:checked~section .tab3,
+#tab4:checked~section .tab4,
+#tab9:checked~section .tab9,
+#tab10:checked~section .tab10,
+#tab13:checked~section .tab13,
+#tab14:checked~section .tab14,
+#tab15:checked~section .tab15,
+#tab16:checked~section .tab16,
+#tab17:checked~section .tab17,
+#tab18:checked~section .tab18,
+#tab19:checked~section .tab19,
+#tab20:checked~section .tab20,
+#tab21:checked~section .tab21,
+#tab22:checked~section .tab22,
+#tab23:checked~section .tab23,
+#tab24:checked~section .tab24,
+#tab25:checked~section .tab25,
+#tab26:checked~section .tab26,
+#tab27:checked~section .tab27,
+#tab28:checked~section .tab28,
+#tab29:checked~section .tab29,
+#tab30:checked~section .tab30 {
+	display: flex;
+}
+
+#tab5:checked~section .tab5,
+#tab6:checked~section .tab6,
+#tab5:checked~.right-trade-bar .tab5,
+#tab6:checked~.right-trade-bar .tab6 {
+	display: flex;
+}
+
+#tab15:checked~.tab-panel .tab15,
+#tab16:checked~.tab-panel .tab16,
+#tab17:checked~.tab-panel .tab17,
+#tab18:checked~.tab-panel .tab18,
+#tab19:checked~.tab-panel .tab19,
+#tab20:checked~.tab-panel .tab20,
+#tab21:checked~.tab-panel .tab21,
+#tab22:checked~.tab-panel .tab22,
+#tab23:checked~.tab-panel .tab23,
+#tab24:checked~.tab-panel .tab24,
+#tab25:checked~.tab-panel .tab25,
+#tab26:checked~.tab-panel .tab26,
+#tab27:checked~.tab-panel .tab27,
+#tab28:checked~.tab-panel .tab28,
+#tab29:checked~.tab-panel .tab29,
+#tab30:checked~.tab-panel .tab30 {
+	display: flex;
+}
+
+#tab7:checked~.tab-panel .tab7,
+#tab11:checked~.tab-panel .tab11 {
+	color: #fff;
+	background-color: #254d3e;
+}
+
+#tab7:checked~.tab-panel .tab7:hover,
+#tab11:checked~.tab-panel .tab11:hover {
+	background-color: #3e7f68;
+}
+
+#tab8:checked~.tab-panel .tab8,
+#tab12:checked~.tab-panel .tab12 {
+	color: #fff;
+	background-color: #7f3a4b;
+}
+
+#tab8:checked~.tab-panel .tab8:hover,
+#tab12:checked~.tab-panel .tab12:hover {
+	background-color: #af5067;
+}
+
+#tab1:checked~.tab-panel .tab1 label,
+#tab2:checked~.tab-panel .tab2 label,
+#tab3:checked~.tab-panel .tab3 label,
+#tab4:checked~.tab-panel .tab4 label,
+#tab19:checked~.tab-panel .tab19 label.tab19,
+#tab20:checked~.tab-panel .tab20 label.tab20,
+#tab21:checked~.tab-panel .tab21 label.tab21,
+#tab22:checked~.tab-panel .tab22 label.tab22,
+#tab23:checked~.tab-panel .tab23 label.tab23,
+#tab24:checked~.tab-panel .tab24 label.tab24 {
+	color: #fff;
+	background-color: #323237;
+}
+
+@media screen and (max-width: 875px) {
+	.w-trade-sidebar {
+		width: 100%;
+	}
+
+	#tab5:checked~section .tab5,
+	#tab6:checked~section .tab6 {
+		display: block;
+	}
+}

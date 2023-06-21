@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charSet="utf-8" />
+    <title>Vertex</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="next-head-count" content="3" />
+    <link rel="icon" href="https://app.vertexprotocol.com/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./src/images/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./src/images/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./src/images/favicon-16x16.png" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta content="DeFi, differently. Stop sacrificing control for convenience and performance." name="description" />
+    <link rel="stylesheet" href="./dist/output.css" data-n-g="" />
+</head>
+
+<body class="bg-black-0 text-white-800 overflow-page">
+    <main>
+        <div
+            class="bg-mobile-highlights lg:bg-desktop-highlights flex h-screen w-screen flex-col overflow-hidden bg-cover bg-no-repeat">
+            <div class="z-40 w-full bg-black-0 border-black-200 border-b">
+                <div class="relative flex w-full flex-col lg:hidden">
+                    <div class="flex h-16 w-full items-center px-4">
+                        <button
+                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer border-black-200 bg-black-700 rounded-md border p-2 text-white-0 transition sidebar-toggler">
+                            <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+                                height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+                            </svg>
+                        </button>
+                        <div class="flex flex-1 items-center justify-center">
+                            <a class="cursor-pointer" href="overview.html">
+                                <img alt="Vertex" loading="lazy" width="74" height="14" decoding="async" data-nimg="1"
+                                    src="https://app.vertexprotocol.com/general/VertexDarkLogo.svg"
+                                    style="color: transparent;">
+                            </a>
+                        </div>
+                        <button
+                            class="transition duration-200 cursor-pointer divide-black-200 border-black-200 bg-black-700 flex items-center divide-x rounded-md border connect-dropdown-toggler">
+                            <div class="p-2">
+                                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16"
+                                    class="text-white-500" height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z">
+                                    </path>
+                                </svg>
+                            </div>
+                            <div class="max-w-max p-2">
+                                <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                    stroke-linecap="round" stroke-linejoin="round" class="text-white-500 w-5"
+                                    height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <polyline points="6 9 12 15 18 9"></polyline>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="absolute top-full left-0 transition sidebar -translate-x-full">
+                        <div
+                            class="no-scrollbar flex flex-col items-stretch justify-between overflow-y-auto bg-black-800 border-black-200 w-screen border-t backdrop-blur-md h-[calc(100vh-4rem)]">
+                            <div class="flex flex-col p-4">
+                                <a class="transition duration-200 cursor-pointer text-white-0 flex justify-start py-4 px-1"
+                                    href="overview.html">Portfolio</a>
+                                <a class="transition duration-200 cursor-pointer text-white-700 hover:text-white-800 flex justify-start py-4 px-1"
+                                    href="spot.html">Spot</a>
+                                <a class="transition duration-200 cursor-pointer text-white-700 hover:text-white-800 flex justify-start py-4 px-1"
+                                    href="perpetuals.html">Perpetuals</a>
+                                <button
+                                    class="transition duration-200 cursor-not-allowed opacity-50 opacity-50 flex justify-start py-4 px-1"
+                                    disabled="" href="/rewards">Rewards</button>
+                                <button
+                                    class="flex items-center gap-x-3 text-white-700 hover:text-white-800 py-4 px-1 header-menu-dropdown-toggler"
+                                    id="headlessui-disclosure-button-:r0:" type="button" aria-expanded="false"
+                                    data-headlessui-state="">More<svg stroke="currentColor" fill="none" stroke-width="2"
+                                        viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="16"
+                                        width="16" xmlns="http://www.w3.org/2000/svg">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="px-8 hidden opacity-0 -translate-y-full header-menu-dropdown"
+                                    id="headlessui-disclosure-panel-:r67:" data-headlessui-state="open">
+                                    <div class="border-black-200 flex flex-col items-start border-l"><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex-protocol.gitbook.io/docs"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 22h1v-2h-.989C8.703 19.994 6 19.827 6 16c0-1.993-.665-3.246-1.502-4C5.335 11.246 6 9.993 6 8c0-3.827 2.703-3.994 3-4h1V2H8.998C7.269 2.004 4 3.264 4 8c0 2.8-1.678 2.99-2.014 3L2 13c.082 0 2 .034 2 3 0 4.736 3.269 5.996 5 6zm13-11c-.082 0-2-.034-2-3 0-4.736-3.269-5.996-5-6h-1v2h.989c.308.006 3.011.173 3.011 4 0 1.993.665 3.246 1.502 4-.837.754-1.502 2.007-1.502 4 0 3.827-2.703 3.994-3 4h-1v2h1.002C16.731 21.996 20 20.736 20 16c0-2.8 1.678-2.99 2.014-3L22 11z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Docs</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex-protocol.gitbook.io/docs/more/glossary"><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 24 24" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                                <path
+                                                    d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8.48-.68.21-1.94-1.14-1.94-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26.37.6.58 1.73.01 2.57-.63.93-1.23 1.21-1.56 1.81-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66zm-.56 3.79c0-.59.47-1.04 1.05-1.04.59 0 1.04.45 1.04 1.04 0 .58-.44 1.05-1.04 1.05-.58 0-1.05-.47-1.05-1.05z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Glossary</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://discord.gg/vertexprotocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Discord</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://twitter.com/vertex_protocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Twitter</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertexprotocol.com"><svg stroke="currentColor" fill="none"
+                                                stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                                stroke-linejoin="round" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                <path
+                                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Website</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://blog.vertexprotocol.com"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path
+                                                    d="M19 5v9h-5v5H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10l6-6V5c0-1.1-.9-2-2-2zm-7 11H7v-2h5v2zm5-4H7V8h10v2z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Blog</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex.betteruptime.com"><svg stroke="currentColor"
+                                                fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                                stroke-linejoin="round" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"></path>
+                                            </svg>
+                                            <p class="text-sm">Status</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://hackenproof.com/vertex-protocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m16.895 6.519 2.813-2.812-1.414-1.414-2.846 2.846a6.575 6.575 0 0 0-.723-.454 5.778 5.778 0 0 0-5.45 0c-.25.132-.488.287-.722.453L5.707 2.293 4.293 3.707l2.813 2.812A8.473 8.473 0 0 0 5.756 9H2v2h2.307c-.065.495-.107.997-.107 1.5 0 .507.042 1.013.107 1.511H2v2h2.753c.013.039.021.08.034.118.188.555.421 1.093.695 1.6.044.081.095.155.141.234l-2.33 2.33 1.414 1.414 2.11-2.111a7.477 7.477 0 0 0 2.068 1.619c.479.253.982.449 1.496.58a6.515 6.515 0 0 0 3.237.001 6.812 6.812 0 0 0 1.496-.58c.465-.246.914-.55 1.333-.904.258-.218.5-.462.734-.716l2.111 2.111 1.414-1.414-2.33-2.33c.047-.08.098-.155.142-.236.273-.505.507-1.043.694-1.599.013-.039.021-.079.034-.118H22v-2h-2.308c.065-.499.107-1.004.107-1.511 0-.503-.042-1.005-.106-1.5H22V9h-3.756a8.494 8.494 0 0 0-1.349-2.481zM8.681 7.748c.445-.558.96-.993 1.528-1.294a3.773 3.773 0 0 1 3.581 0 4.894 4.894 0 0 1 1.53 1.295c.299.373.54.8.753 1.251H7.927c.214-.451.454-.879.754-1.252zM17.8 12.5c0 .522-.042 1.044-.126 1.553-.079.49-.199.973-.355 1.436a8.28 8.28 0 0 1-.559 1.288 7.59 7.59 0 0 1-.733 1.11c-.267.333-.56.636-.869.898-.31.261-.639.484-.979.664s-.695.317-1.057.41c-.04.01-.082.014-.122.023V14h-2v5.881c-.04-.009-.082-.013-.122-.023-.361-.093-.717-.23-1.057-.41s-.669-.403-.978-.664a6.462 6.462 0 0 1-.871-.899 7.402 7.402 0 0 1-.731-1.108 8.337 8.337 0 0 1-.56-1.289 9.075 9.075 0 0 1-.356-1.438A9.61 9.61 0 0 1 6.319 11H17.68c.079.491.12.995.12 1.5z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Report a Bug</p>
+                                        </a><a
+                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer hover:text-white-800 text-white-500 inline-flex gap-x-3 rounded px-4 py-3 text-sm disabled:pointer-events-none disabled:opacity-20 lg:text-sm lg:font-medium py-4 px-1"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertexprotocol.com/docs/TermsOfService.pdf"><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 16 16" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z">
+                                                </path>
+                                                <path
+                                                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm">Terms of Use</p>
+                                        </a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <nav class="h-[4rem] min-h-[4rem] w-full flex items-center justify-between hidden lg:flex">
+                    <div class="flex h-full w-full items-center justify-between">
+                        <div class="flex items-center justify-start gap-x-2">
+                            <div class="px-6"><a class="cursor-pointer" href="overview.html"><img alt="Vertex"
+                                        loading="lazy" width="74" height="14" decoding="async" data-nimg="1"
+                                        style="color:transparent"
+                                        src="https://app.vertexprotocol.com/general/VertexDarkLogo.svg" /></a>
+                            </div>
+                            <a class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer text-white-0 px-3 text-sm font-medium"
+                                href="overview.html">Portfolio</a>
+                            <a class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer text-white-700 hover:text-white-800 px-3 text-sm font-medium"
+                                href="spot.html">Spot</a>
+                            <a class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer text-white-700 hover:text-white-800 px-3 text-sm font-medium"
+                                href="perpetuals.html">Perpetuals</a>
+                            <button
+                                class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-not-allowed opacity-50 opacity-50 px-3 text-sm font-medium"
+                                disabled="" href="#">Rewards</button>
+                            <div>
+                                <button
+                                    class="flex items-center justify-center gap-x-2 font-medium transition disabled:text-white-300 px-4 py-2 text-sm disabled:cursor-not-allowed text-white-700 hover:text-white-800 header-menu-dropdown-toggler"
+                                    type="button" aria-expanded="false">More
+                                    <svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                        stroke-linecap="round" stroke-linejoin="round" height="16" width="16"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                    </svg>
+                                </button>
+                                <div class="-translate-y-full opacity-0 hidden header-menu-dropdown">
+                                    <div class="bg-black-700 border-black-200 shadow-black-900/10 absolute z-10 mt-2 flex w-40 flex-col justify-start gap-y-2 rounded border p-2 shadow-lg"
+                                        id="headlessui-popover-panel-:r63:" tabindex="-1" data-headlessui-state="open">
+                                        <a class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex-protocol.gitbook.io/docs"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M9 22h1v-2h-.989C8.703 19.994 6 19.827 6 16c0-1.993-.665-3.246-1.502-4C5.335 11.246 6 9.993 6 8c0-3.827 2.703-3.994 3-4h1V2H8.998C7.269 2.004 4 3.264 4 8c0 2.8-1.678 2.99-2.014 3L2 13c.082 0 2 .034 2 3 0 4.736 3.269 5.996 5 6zm13-11c-.082 0-2-.034-2-3 0-4.736-3.269-5.996-5-6h-1v2h.989c.308.006 3.011.173 3.011 4 0 1.993.665 3.246 1.502 4-.837.754-1.502 2.007-1.502 4 0 3.827-2.703 3.994-3 4h-1v2h1.002C16.731 21.996 20 20.736 20 16c0-2.8 1.678-2.99 2.014-3L22 11z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Docs</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex-protocol.gitbook.io/docs/more/glossary"><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 24 24" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="none" d="M0 0h24v24H0V0z"></path>
+                                                <path
+                                                    d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12zm-6.49-5.84c.41-.73 1.18-1.16 1.63-1.8.48-.68.21-1.94-1.14-1.94-.88 0-1.32.67-1.5 1.23l-1.37-.57C11.51 5.96 12.52 5 13.99 5c1.23 0 2.08.56 2.51 1.26.37.6.58 1.73.01 2.57-.63.93-1.23 1.21-1.56 1.81-.13.24-.18.4-.18 1.18h-1.52c.01-.41-.06-1.08.26-1.66zm-.56 3.79c0-.59.47-1.04 1.05-1.04.59 0 1.04.45 1.04 1.04 0 .58-.44 1.05-1.04 1.05-.58 0-1.05-.47-1.05-1.05z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Glossary</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://discord.gg/vertexprotocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Discord</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://twitter.com/vertex_protocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 16 16" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Twitter</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertexprotocol.com"><svg stroke="currentColor" fill="none"
+                                                stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                                stroke-linejoin="round" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="12" cy="12" r="10"></circle>
+                                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                                <path
+                                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Website</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://blog.vertexprotocol.com"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                                <path
+                                                    d="M19 5v9h-5v5H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h10l6-6V5c0-1.1-.9-2-2-2zm-7 11H7v-2h5v2zm5-4H7V8h10v2z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Blog</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertex.betteruptime.com"><svg stroke="currentColor"
+                                                fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round"
+                                                stroke-linejoin="round" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                                <path d="M3 12h4.5l1.5 -6l4 12l2 -9l1.5 3h4.5"></path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Status</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://hackenproof.com/vertex-protocol"><svg stroke="currentColor"
+                                                fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                                                width="1em" xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="m16.895 6.519 2.813-2.812-1.414-1.414-2.846 2.846a6.575 6.575 0 0 0-.723-.454 5.778 5.778 0 0 0-5.45 0c-.25.132-.488.287-.722.453L5.707 2.293 4.293 3.707l2.813 2.812A8.473 8.473 0 0 0 5.756 9H2v2h2.307c-.065.495-.107.997-.107 1.5 0 .507.042 1.013.107 1.511H2v2h2.753c.013.039.021.08.034.118.188.555.421 1.093.695 1.6.044.081.095.155.141.234l-2.33 2.33 1.414 1.414 2.11-2.111a7.477 7.477 0 0 0 2.068 1.619c.479.253.982.449 1.496.58a6.515 6.515 0 0 0 3.237.001 6.812 6.812 0 0 0 1.496-.58c.465-.246.914-.55 1.333-.904.258-.218.5-.462.734-.716l2.111 2.111 1.414-1.414-2.33-2.33c.047-.08.098-.155.142-.236.273-.505.507-1.043.694-1.599.013-.039.021-.079.034-.118H22v-2h-2.308c.065-.499.107-1.004.107-1.511 0-.503-.042-1.005-.106-1.5H22V9h-3.756a8.494 8.494 0 0 0-1.349-2.481zM8.681 7.748c.445-.558.96-.993 1.528-1.294a3.773 3.773 0 0 1 3.581 0 4.894 4.894 0 0 1 1.53 1.295c.299.373.54.8.753 1.251H7.927c.214-.451.454-.879.754-1.252zM17.8 12.5c0 .522-.042 1.044-.126 1.553-.079.49-.199.973-.355 1.436a8.28 8.28 0 0 1-.559 1.288 7.59 7.59 0 0 1-.733 1.11c-.267.333-.56.636-.869.898-.31.261-.639.484-.979.664s-.695.317-1.057.41c-.04.01-.082.014-.122.023V14h-2v5.881c-.04-.009-.082-.013-.122-.023-.361-.093-.717-.23-1.057-.41s-.669-.403-.978-.664a6.462 6.462 0 0 1-.871-.899 7.402 7.402 0 0 1-.731-1.108 8.337 8.337 0 0 1-.56-1.289 9.075 9.075 0 0 1-.356-1.438A9.61 9.61 0 0 1 6.319 11H17.68c.079.491.12.995.12 1.5z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Report a Bug</p>
+                                        </a><a
+                                            class="transition duration-200 cursor-pointer text-white-700 flex items-center gap-x-2 rounded p-1.5 py-0.5 hover:bg-black-300 hover:text-white"
+                                            target="_blank" rel="noopener noreferrer"
+                                            href="https://vertexprotocol.com/docs/TermsOfService.pdf"><svg
+                                                stroke="currentColor" fill="currentColor" stroke-width="0"
+                                                viewBox="0 0 16 16" height="1em" width="1em"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.725 10.725 0 0 0 2.287 2.233c.346.244.652.42.893.533.12.057.218.095.293.118a.55.55 0 0 0 .101.025.615.615 0 0 0 .1-.025c.076-.023.174-.061.294-.118.24-.113.547-.29.893-.533a10.726 10.726 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-2.517 2.453 7.159 7.159 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7.158 7.158 0 0 1-1.048-.625 11.777 11.777 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z">
+                                                </path>
+                                                <path
+                                                    d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z">
+                                                </path>
+                                            </svg>
+                                            <p class="text-sm lg:leading-5">Terms of Use</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex h-full items-center"></div>
+                    </div>
+                    <div class="flex items-center gap-x-2 py-0.5 min-w-sidebar border-black-200 h-full border-l px-3">
+                        <button
+                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 text-sm bg-radial-gradient-orange hover:brightness-110 text-white-0 border-black-200 rounded border font-medium opacity-100 h-8 w-full connect-wallet-toggler">Connect
+                            Wallet</button>
+                    </div>
+                </nav>
+            </div>
+            <div class="relative flex h-full w-full overflow-hidden">
+                <div class="no-scrollbar flex h-full flex-1 flex-col overflow-x-hidden">
+                    <div class="no-scrollbar w-full flex-1 overflow-x-hidden">
+                        <div class="flex h-full w-full">
+                            <div class="relative hidden lg:flex">
+                                <button
+                                    class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer border-black-200 rounded border font-medium text-white-700 hover:bg-black-200 focus:ring-black-200 focus:ring-1 text-xs bg-black-0 absolute top-12 left-full z-10 h-6 w-3 -translate-x-1/2 -translate-y-1/2 rounded border p-0 transition-none hover:border-purple-700 hover:text-white-0 subnav-toggler">
+                                    <div><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                                            stroke-linecap="round" stroke-linejoin="round" height="16" width="16"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <polyline points="15 18 9 12 15 6"></polyline>
+                                        </svg></div>
+                                </button>
+                                <div
+                                    class="divide-black-200 border-black-200 flex h-full flex-col items-center justify-start divide-y border-r h-full flex-col overflow-hidden px-0 duration-200 w-subnav-menu subnav">
+                                    <div class="divide-black-200 w-full min-w-max divide-y duration-200 translate-x-0">
+                                        <a class="transition duration-200 cursor-pointer flex w-full items-center justify-start gap-x-3 px-6 py-3 text-xs transition hover:bg-black-600 bg-black-700 text-white-0"
+                                            href="overview.html">
+                                            <div>Overview</div>
+                                        </a>
+                                        <a class="transition duration-200 cursor-pointer flex w-full items-center justify-start gap-x-3 px-6 py-3 text-xs transition hover:bg-black-600 text-white-600"
+                                            href="positions.html">
+                                            <div>Perp Positions</div>
+                                        </a>
+                                        <a class="transition duration-200 cursor-pointer flex w-full items-center justify-start gap-x-3 px-6 py-3 text-xs transition hover:bg-black-600 text-white-600"
+                                            href="#">
+                                            <div>Balances</div>
+                                        </a>
+                                        <a class="transition duration-200 cursor-pointer flex w-full items-center justify-start gap-x-3 px-6 py-3 text-xs transition hover:bg-black-600 text-white-600"
+                                            href="#">
+                                            <div>Open Orders</div>
+                                        </a>
+                                        <a class="transition duration-200 cursor-pointer flex w-full items-center justify-start gap-x-3 px-6 py-3 text-xs transition hover:bg-black-600 text-white-600"
+                                            href="#">
+                                            <div>Account History</div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex h-full flex-1 flex-col overflow-x-hidden">
+                                <div class="py-6 px-3 no-scrollbar flex w-full gap-x-2 overflow-x-auto lg:hidden">
+                                    <a class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-3 py-1.5 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-xs gap-x-1.5 whitespace-nowrap"
+                                        href="overview.html">
+                                        <div>Overview</div>
+                                    </a><a
+                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-3 py-1.5 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-xs gap-x-1.5 whitespace-nowrap"
+                                        href="positions.html">
+                                        <div>Perp Positions</div>
+                                    </a><a
+                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-3 py-1.5 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-xs gap-x-1.5 whitespace-nowrap"
+                                        href="#">
+                                        <div>Balances</div>
+                                    </a><a
+                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-3 py-1.5 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-xs gap-x-1.5 whitespace-nowrap"
+                                        href="#">
+                                        <div>Open Orders</div>
+                                    </a><a
+                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-3 py-1.5 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-xs gap-x-1.5 whitespace-nowrap"
+                                        href="#">
+                                        <div>Account History</div>
+                                    </a>
+                                </div>
+                                <div
+                                    class="no-scrollbar w-full flex-1 overflow-y-auto px-3 lg:py-6 lg:px-8 pb-24 lg:pb-4">
+                                    <div class="flex flex-col gap-y-6">
+                                        <div>
+                                            <button class="flex items-center gap-x-4 px-4 pb-4 collapse-toggler open"
+                                                id="headlessui-disclosure-button-:R2mkpct6:" type="button"
+                                                aria-expanded="true" data-headlessui-state="open">
+                                                <div class="text-2xl">Overview</div>
+                                                <span
+                                                    class="text-white-600 hover:bg-black-400 flex items-center gap-x-1 rounded py-1 px-2 text-xs trigger">
+                                                    Hide <svg stroke="currentColor" fill="none" stroke-width="2"
+                                                        viewBox="0 0 24 24" stroke-linecap="round"
+                                                        stroke-linejoin="round" height="14" width="14"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                                    </svg>
+                                                </span>
+                                                <span
+                                                    class="text-white-600 hover:bg-black-400 flex items-center gap-x-1 rounded py-1 px-2 text-xs trigger">
+                                                    Show <svg stroke="currentColor" fill="none" stroke-width="2"
+                                                        viewBox="0 0 24 24" stroke-linecap="round"
+                                                        stroke-linejoin="round" height="14" width="14"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div>
+                                                <div id="headlessui-disclosure-panel-:R4mkpct6:"
+                                                    data-headlessui-state="open">
+                                                    <div
+                                                        class="divide-black-200 border-black-200 divide-y overflow-hidden rounded border">
+                                                        <div
+                                                            class="bg-black-700 flex w-full items-start justify-between p-3 lg:p-5">
+                                                            <div class="flex flex-col gap-y-1">
+                                                                <div
+                                                                    class="text-white-700 flex items-center gap-x-1 text-sm">
+                                                                    Account Value<div class="hover:cursor-help">
+                                                                        <svg stroke="currentColor" fill="currentColor"
+                                                                            stroke-width="0" viewBox="0 0 24 24"
+                                                                            class="text-white-600" height="14"
+                                                                            width="14"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill="none" d="M0 0h24v24H0V0z">
+                                                                            </path>
+                                                                            <path
+                                                                                d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                                                            </path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                                <p class="font-mono text-xl lg:text-3xl animate-pulse">
+                                                                    $0.00</p>
+                                                            </div>
+                                                            <div
+                                                                class="h-full items-center justify-center gap-4 hidden lg:flex">
+                                                                <button
+                                                                    class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-not-allowed opacity-50 border-black-200 rounded border font-medium px-5 py-2 text-sm text-white-800"
+                                                                    disabled="">Deposit</button><button
+                                                                    class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-not-allowed opacity-50 border-black-200 rounded border font-medium px-5 py-2 text-sm text-white-800"
+                                                                    disabled="">Withdraw</button>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="bg-black-500 flex h-full w-full flex-wrap justify-start gap-x-8 p-0.5 pb-1 lg:p-2">
+                                                            <div
+                                                                class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                <div
+                                                                    class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                    <div class="hover:cursor-help">Assets</div>
+                                                                </div>
+                                                                <p>$0.00</p>
+                                                            </div>
+                                                            <div
+                                                                class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                <div
+                                                                    class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                    <div class="hover:cursor-help">Borrows</div>
+                                                                </div>
+                                                                <p>$0.00</p>
+                                                            </div>
+                                                            <div class="flex flex-col gap-y-1 px-3 py-2">
+                                                                <div class="flex items-center gap-x-1">
+                                                                    <div class="hover:cursor-help">
+                                                                        <div class="text-white-700 text-2xs lg:text-xs">
+                                                                            Perp PnL</div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="flex items-center gap-x-1.5">
+                                                                    $0.00<div class="flex items-center text-xs">
+                                                                        (0.00%)</div>
+                                                                    <div
+                                                                        class="hover:cursor-help bg-black-300 hover:text-white-800 rounded p-0.5">
+                                                                        <svg stroke="currentColor" fill="none"
+                                                                            stroke-width="0" viewBox="0 0 15 15"
+                                                                            class="text-white-600" height="16"
+                                                                            width="16"
+                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                            <path fill-rule="evenodd"
+                                                                                clip-rule="evenodd"
+                                                                                d="M10 6.5C10 8.433 8.433 10 6.5 10C4.567 10 3 8.433 3 6.5C3 4.567 4.567 3 6.5 3C8.433 3 10 4.567 10 6.5ZM9.30884 10.0159C8.53901 10.6318 7.56251 11 6.5 11C4.01472 11 2 8.98528 2 6.5C2 4.01472 4.01472 2 6.5 2C8.98528 2 11 4.01472 11 6.5C11 7.56251 10.6318 8.53901 10.0159 9.30884L12.8536 12.1464C13.0488 12.3417 13.0488 12.6583 12.8536 12.8536C12.6583 13.0488 12.3417 13.0488 12.1464 12.8536L9.30884 10.0159Z"
+                                                                                fill="currentColor"></path>
+                                                                        </svg>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <button class="flex items-center gap-x-4 px-4 pb-4 collapse-toggler open"
+                                                id="headlessui-disclosure-button-:R36kpct6:" type="button"
+                                                aria-expanded="true" data-headlessui-state="open">
+                                                <div class="text-2xl">Health</div>
+                                                <span
+                                                    class="text-white-600 hover:bg-black-400 flex items-center gap-x-1 rounded py-1 px-2 text-xs trigger">
+                                                    Hide <svg stroke="currentColor" fill="none" stroke-width="2"
+                                                        viewBox="0 0 24 24" stroke-linecap="round"
+                                                        stroke-linejoin="round" height="14" width="14"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <polyline points="18 15 12 9 6 15"></polyline>
+                                                    </svg>
+                                                </span>
+                                                <span
+                                                    class="text-white-600 hover:bg-black-400 flex items-center gap-x-1 rounded py-1 px-2 text-xs trigger">
+                                                    Show <svg stroke="currentColor" fill="none" stroke-width="2"
+                                                        viewBox="0 0 24 24" stroke-linecap="round"
+                                                        stroke-linejoin="round" height="14" width="14"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <polyline points="6 9 12 15 18 9"></polyline>
+                                                    </svg>
+                                                </span>
+                                            </button>
+                                            <div>
+                                                <div id="headlessui-disclosure-panel-:R56kpct6:"
+                                                    data-headlessui-state="open">
+                                                    <div class="border-black-200 rounded border">
+                                                        <div class="bg-black-700 rounded-t">
+                                                            <div class="px-3 py-4 lg:px-6 lg:py-6">
+                                                                <div class="flex flex-col gap-y-2.5">
+                                                                    <div class="flex justify-between">
+                                                                        <div
+                                                                            class="text-white-800 flex items-center gap-x-1 leading-4">
+                                                                            <p
+                                                                                class="text-white-800 text-xs capitalize lg:text-base">
+                                                                                low Risk</p>
+                                                                            <div class="hover:cursor-help"><svg
+                                                                                    stroke="currentColor"
+                                                                                    fill="currentColor" stroke-width="0"
+                                                                                    viewBox="0 0 24 24"
+                                                                                    class="text-white-600 text-sm lg:text-base"
+                                                                                    height="1em" width="1em"
+                                                                                    xmlns="http://www.w3.org/2000/svg">
+                                                                                    <path fill="none"
+                                                                                        d="M0 0h24v24H0V0z">
+                                                                                    </path>
+                                                                                    <path
+                                                                                        d="M11 7h2v2h-2V7zm0 4h2v6h-2v-6zm1-9C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z">
+                                                                                    </path>
+                                                                                </svg></div>
+                                                                        </div>
+                                                                        <div class="text-xs leading-5 lg:hidden">
+                                                                            <div
+                                                                                class="inline text-base text-green-500">
+                                                                                100</div>/100
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="hover:cursor-help hover:cursor-default">
+                                                                        <div class="flex items-center gap-x-px">
+                                                                            <div class="bg-black-700 relative h-4 w-full overflow-hidden rounded-[4px]"
+                                                                                style="width:10%">
+                                                                                <div style="transform:scaleX(1)"
+                                                                                    class="h-full w-full origin-left bg-green-500 transition-none">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bg-black-700 relative h-4 w-full overflow-hidden rounded-[4px]"
+                                                                                style="width:10%">
+                                                                                <div style="transform:scaleX(1)"
+                                                                                    class="h-full w-full origin-left bg-green-500 transition-none">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bg-black-700 relative h-4 w-full overflow-hidden rounded-[4px]"
+                                                                                style="width:20%">
+                                                                                <div style="transform:scaleX(1)"
+                                                                                    class="h-full w-full origin-left bg-green-500 transition-none">
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="bg-black-700 relative h-4 w-full overflow-hidden rounded-[4px]"
+                                                                                style="width:60%">
+                                                                                <div style="transform:scaleX(1)"
+                                                                                    class="h-full w-full origin-left bg-green-500 duration-700">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="bg-black-500 border-black-200 rounded-b border-t p-0.5 lg:p-2">
+                                                            <div
+                                                                class="grid h-full w-full grid-cols-2 items-center lg:flex lg:gap-x-8 lg:p-0">
+                                                                <div
+                                                                    class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                    <div
+                                                                        class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                        <div class="hover:cursor-help">Funds
+                                                                            Until Liq.</div>
+                                                                    </div>
+                                                                    <p class="animate-pulse">$0.00
+                                                                    </p>
+                                                                </div>
+                                                                <div
+                                                                    class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                    <div
+                                                                        class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                        <div class="hover:cursor-help">Margin
+                                                                            Usage</div>
+                                                                    </div>
+                                                                    <p class="animate-pulse">0.00%
+                                                                    </p>
+                                                                </div>
+                                                                <div
+                                                                    class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                    <div
+                                                                        class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                        <div class="hover:cursor-help">Available
+                                                                            Funds</div>
+                                                                    </div>
+                                                                    <p class="animate-pulse">$0.00
+                                                                    </p>
+                                                                </div>
+                                                                <div
+                                                                    class="flex flex-col items-start justify-center gap-y-1 py-2 px-3">
+                                                                    <div
+                                                                        class="text-white-700 flex items-center gap-x-1 text-xs">
+                                                                        <div class="hover:cursor-help">Leverage
+                                                                        </div>
+                                                                    </div>
+                                                                    <p class="animate-pulse">-0.0x
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="flex w-full flex-col lg:pt-4 pc-tab">
+                                            <input class="hidden" id="tab1" type="radio" name="pct" checked="checked" />
+                                            <input class="hidden" id="tab2" type="radio" name="pct" />
+                                            <input class="hidden" id="tab3" type="radio" name="pct" />
+                                            <input class="hidden" id="tab4" type="radio" name="pct" />
+
+                                            <div
+                                                class="no-scrollbar border-black-200 flex w-full items-center gap-x-2 overflow-x-auto border-b p-2 pb-4 lg:justify-between tab-panel">
+                                                <div class="flex w-full gap-x-2">
+                                                    <button class="tab1">
+                                                        <label
+                                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 hover:bg-black-200 hover:text-white-0 bg-black-600 text-white-600 rounded text-sm whitespace-nowrap"
+                                                            id="Perp Positions" for="tab1">Perp Positions</label>
+                                                    </button>
+                                                    <button class="tab2">
+                                                        <label
+                                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-sm whitespace-nowrap"
+                                                            id="Assets" for="tab2">Assets</label>
+                                                    </button>
+                                                    <button class="tab3">
+                                                        <label
+                                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 hover:bg-black-200 hover:text-white-0 text-white-600 bg-black-600 rounded text-sm whitespace-nowrap"
+                                                            id="Borrows" for="tab3">Borrows</label>
+                                                    </button>
+                                                </div>
+                                                <button class="tab4" role="tab" type="button">
+                                                    <label
+                                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 text-purple bg-black-600 rounded text-sm text-purple hover:text-purple whitespace-nowrap"
+                                                        id="Vertex FAQ" for="tab4">Vertex FAQ</label>
+                                                </button>
+                                            </div>
+                                            <section class="py-4">
+                                                <div class="tab1">
+                                                    <div class="border-black-200 shadow-standard rounded border">
+                                                        <div class="flex h-full w-full overflow-x-hidden">
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-l">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-left -right-96 origin-left scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tl">
+                                                                        <div class="w-36">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Market / Side</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="no-scrollbar flex-1 overflow-x-auto overflow-y-hidden">
+                                                                <div
+                                                                    class="flex h-full flex-col items-center justify-start text-xs w-max min-w-full">
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b min-w-full">
+                                                                        <div class="w-36">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    <div class="flex flex-col gap-y-1">
+                                                                                        <div>Position Size
+                                                                                        </div>
+                                                                                        <div>Notional Value
+                                                                                        </div>
+                                                                                    </div><svg stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    <div class="flex flex-col gap-y-1">
+                                                                                        <div>
+                                                                                            <div
+                                                                                                class="hover:cursor-help">
+                                                                                                Mark Price
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div>
+                                                                                            <div
+                                                                                                class="hover:cursor-help">
+                                                                                                Entry Price
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    <div class="hover:cursor-help">
+                                                                                        PnL</div><svg
+                                                                                        stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    <div class="hover:cursor-help">
+                                                                                        Margin</div><svg
+                                                                                        stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="grow w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    <div class="hover:cursor-help">
+                                                                                        Funding</div><svg
+                                                                                        stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-r">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-right -left-96 origin-right scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="text-white-500 bg-black-700 flex h-full w-full items-center justify-start p-5 text-sm">
+                                                            You have no open positions</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab2">
+                                                    <div class="border-black-200 shadow-standard rounded border">
+                                                        <div class="flex h-full w-full overflow-x-hidden">
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-l">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-left -right-96 origin-left scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tl">
+                                                                        <div class="w-36">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Asset</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="no-scrollbar flex-1 overflow-x-auto overflow-y-hidden">
+                                                                <div
+                                                                    class="flex h-full flex-col items-center justify-start text-xs w-max min-w-full">
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b min-w-full">
+                                                                        <div class="w-32">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Total<svg stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Value<svg stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28 grow">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="hover:cursor-help">
+                                                                                    <div
+                                                                                        class="flex items-center gap-x-2">
+                                                                                        Deposit APR<svg
+                                                                                            stroke="currentColor"
+                                                                                            fill="currentColor"
+                                                                                            stroke-width="0"
+                                                                                            viewBox="0 0 320 512"
+                                                                                            class="text-white-500 group-hover:text-white-800"
+                                                                                            height="10" width="10"
+                                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path
+                                                                                                d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                            </path>
+                                                                                        </svg></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-64"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-r">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-right -left-96 origin-right scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="text-white-500 bg-black-700 flex h-full w-full items-center justify-start p-5 text-sm">
+                                                            You don't have any assets</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab3">
+                                                    <div class="border-black-200 shadow-standard rounded border">
+                                                        <div class="flex h-full w-full overflow-x-hidden">
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-l">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-left -right-96 origin-left scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tl">
+                                                                        <div class="w-36">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Asset</div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="no-scrollbar flex-1 overflow-x-auto overflow-y-hidden">
+                                                                <div
+                                                                    class="flex h-full flex-col items-center justify-start text-xs w-max min-w-full">
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b min-w-full">
+                                                                        <div class="w-32">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Borrowing<svg stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="flex items-center gap-x-2">
+                                                                                    Value<svg stroke="currentColor"
+                                                                                        fill="currentColor"
+                                                                                        stroke-width="0"
+                                                                                        viewBox="0 0 320 512"
+                                                                                        class="text-white-500 group-hover:text-white-800"
+                                                                                        height="10" width="10"
+                                                                                        xmlns="http://www.w3.org/2000/svg">
+                                                                                        <path
+                                                                                            d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                        </path>
+                                                                                    </svg></div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-28 grow">
+                                                                            <div
+                                                                                class="h-full whitespace-nowrap text-xs pl-4 group flex items-center gap-x-2 whitespace-nowrap text-white-600 pointer-events-auto font-sans transition duration-200 hover:text-white-800 cursor-pointer select-none">
+                                                                                <div class="hover:cursor-help">
+                                                                                    <div
+                                                                                        class="flex items-center gap-x-2">
+                                                                                        Borrow APR<svg
+                                                                                            stroke="currentColor"
+                                                                                            fill="currentColor"
+                                                                                            stroke-width="0"
+                                                                                            viewBox="0 0 320 512"
+                                                                                            class="text-white-500 group-hover:text-white-800"
+                                                                                            height="10" width="10"
+                                                                                            xmlns="http://www.w3.org/2000/svg">
+                                                                                            <path
+                                                                                                d="M41 288h238c21.4 0 32.1 25.9 17 41L177 448c-9.4 9.4-24.6 9.4-33.9 0L24 329c-15.1-15.1-4.4-41 17-41zm255-105L177 64c-9.4-9.4-24.6-9.4-33.9 0L24 183c-15.1 15.1-4.4 41 17 41h238c21.4 0 32.1-25.9 17-41z">
+                                                                                            </path>
+                                                                                        </svg></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="w-64"></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div
+                                                                class="flex h-full flex-col items-center justify-start text-xs w-max">
+                                                                <div class="relative rounded-r">
+                                                                    <div
+                                                                        class="pointer-events-none absolute z-10 h-[calc(100%-2px)] w-96 transform duration-300 bg-gradient-fade-right -left-96 origin-right scale-x-0 opacity-0">
+                                                                    </div>
+                                                                    <div
+                                                                        class="h-16 bg-black-700 border-black-200 flex items-center border-b rounded-tr">
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="text-white-500 bg-black-700 flex h-full w-full items-center justify-start p-5 text-sm">
+                                                            You don't have any borrows</div>
+                                                    </div>
+                                                </div>
+                                                <div class="tab4">
+                                                    <div class="grid w-full gap-4 lg:grid-cols-2">
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">Is Vertex non-custodial?</div>
+                                                            <div class="text-white-600 p-3 text-sm">Yes, Vertex users
+                                                                retain control over their assets. When you deposit funds
+                                                                into Vertex you are depositing them into non-custodial
+                                                                smart contracts that enable leverage and monitor account
+                                                                health. The Vertex protocol doesn’t take custody over
+                                                                user assets. You’re in control.</div>
+                                                        </div>
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">What is cross margin?</div>
+                                                            <div class="text-white-600 p-3 text-sm">
+                                                                <div class="flex flex-col gap-y-4">
+                                                                    <div>Cross-margin is a type of margin system that
+                                                                        allows traders to utilize the total value of
+                                                                        their account as collateral. Therefore, margin
+                                                                        is shared across all your balances and
+                                                                        positions, enabling more flexible and efficient
+                                                                        use of capital</div>
+                                                                    <div>Vertex is cross-margined by default, meaning a
+                                                                        user’s trading account consolidates liabilities
+                                                                        to offset the margin between positions. A user’s
+                                                                        portfolio subsequently serves as collateral
+                                                                        across multiple open positions.</div>
+                                                                    <div>On Vertex, your portfolio is your margin. <a
+                                                                            class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer inline underline hover:text-white-800 text-white-700"
+                                                                            target="_blank" rel="noopener noreferrer"
+                                                                            href="#">Learn
+                                                                            more</a></div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">What collateral can I deposit?</div>
+                                                            <div class="text-white-600 p-3 text-sm">Any spot market
+                                                                added to Vertex will be available as collateral options
+                                                                on Vertex. Vertex will initially allow for USDC, wBTC,
+                                                                ETH, USDT, and DAI as collateral. The list of collateral
+                                                                assets will expand over time.&nbsp;As Vertex grows and
+                                                                introduces new spot markets, more options will become
+                                                                available.</div>
+                                                        </div>
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">How do I earn interest on deposits?</div>
+                                                            <div class="text-white-600 p-3 text-sm">Users automatically
+                                                                earn interest on their deposits. This means that you can
+                                                                hold and earn interest on your favourite assets while
+                                                                using them as margin to trade and borrow. </div>
+                                                        </div>
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">What are the trading fees?</div>
+                                                            <div class="text-white-600 p-3 text-sm">
+                                                                <div class="flex flex-col gap-y-4">
+                                                                    <div>Vertex offers industry-leading fees:</div>
+                                                                    <div>
+                                                                        <div><span class="text-white-800">Stable pairs
+                                                                                (Spot)</span> Maker/Taker = <span
+                                                                                class="text-purple">0 bps</span> / 2 bps
+                                                                        </div>
+                                                                        <div><span class="text-white-800">Stable pairs
+                                                                                (Perps)</span> Maker/Taker = <span
+                                                                                class="text-purple">0 bps</span> / 1 bps
+                                                                        </div>
+                                                                        <div><span class="text-white-800">BTC + ETH
+                                                                                (Spot)</span> Maker/Taker = <span
+                                                                                class="text-purple">0 bps</span> / 2 bps
+                                                                        </div>
+                                                                        <div><span class="text-white-800">BTC + ETH
+                                                                                (Perps)</span> Maker/Taker = <span
+                                                                                class="text-purple">0 bps</span> / 1 bps
+                                                                        </div>
+                                                                    </div>
+                                                                    <div>Learn more about Vertex’s maker and taker fees
+                                                                        <a class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer inline underline hover:text-white-800 text-white-700"
+                                                                            target="_blank" rel="noopener noreferrer"
+                                                                            href="#">here</a>.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            class="divide-black-200 border-black-200 bg-black-700 flex flex-col divide-y rounded border">
+                                                            <div class="p-3">What is the health battery?</div>
+                                                            <div class="text-white-600 p-3 text-sm">
+                                                                <div>The health battery displays your current portfolio
+                                                                    risk. Health is the amount of capital (quoted in
+                                                                    $USD) your account has to trade with. The health
+                                                                    battery is separated into different risk levels,
+                                                                    which is designed to help users understand their
+                                                                    account health. For more details on health, please
+                                                                    refer to the documentation section <a
+                                                                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer inline underline hover:text-white-800 text-white-700"
+                                                                        target="_blank" rel="noopener noreferrer"
+                                                                        href="#">here</a>.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                    <div
+                                        class="fixed left-[50%] bottom-4 z-20 w-full max-w-[450px] -translate-x-1/2 px-6 lg:hidden">
+                                        <div class="bg-black-900 border-black-200 relative rounded border">
+                                            <div class="flex items-stretch gap-x-2 p-2">
+                                                <button
+                                                    class="transition duration-200 cursor-pointer px-5 py-2 text-sm bg-radial-gradient-red hover:brightness-110 text-white-0 border-black-200 rounded border font-medium opacity-100 flex-1 connect-wallet-toggler">Connect
+                                                    Wallet</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="absolute inset-0 z-40 h-full w-full opacity-0 transition hidden connect-dropdown">
+                    <div class="bg-black-900 no-scrollbar flex h-full flex-col overflow-y-auto px-4">
+                        <div class="flex w-full flex-col gap-y-4 pt-4">
+                            <div class="text-white-400 flex w-full flex-col gap-y-4 text-xs">
+                                <div class="flex items-center justify-between">
+                                    <div
+                                        class="flex items-center justify-start gap-x-1.5 whitespace-nowrap text-sm font-medium leading-[18px] tracking-tighter text-white-0">
+                                        <img alt="Vertex" loading="lazy" width="15.13" height="10.5" decoding="async"
+                                            data-nimg="1" src="https://app.vertexprotocol.com/vertex-icon.svg"
+                                            style="color: transparent;">
+                                        <p>Control Centre</p>
+                                    </div>
+                                </div>
+                                <button
+                                    class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 text-sm bg-radial-gradient-orange hover:brightness-110 text-white-0 border-black-200 rounded border font-medium opacity-100 connect-wallet-toggler">Connect
+                                    Wallet</button>
+                            </div>
+                            <div class="bg-black-200 h-px w-full flex-none last:hidden"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="fixed inset-0 z-50 flex min-w-full items-center justify-center text-inherit opacity-0 hidden transition connect-wallet-modal"
+            id="headlessui-dialog-:rc:" role="dialog">
+            <div class="bg-black-900/80 fixed inset-0 backdrop-blur duration-500 connect-wallet-toggler"></div>
+            <div class="text-white-700 bg-black-500 flex w-full flex-col items-center justify-center overflow-hidden rounded max-w-[min(95vw,420px)] scale-100"
+                id="headlessui-dialog-panel-:rd:" data-headlessui-state="open">
+                <h2 class="flex items-center justify-between border-black-200 text-white-800 w-full border-b text-lg leading-7 lg:text-xl px-6 py-4"
+                    id="headlessui-dialog-title-:rg:" data-headlessui-state="open">
+                    <div class="flex-1">Connect Wallet</div>
+                    <button
+                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap gap-x-2 cursor-pointer border-black-200 bg-black-400 text-white-600 rounded border p-1 hover:brightness-110 connect-wallet-toggler"><svg
+                            stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em"
+                            width="1em" xmlns="http://www.w3.org/2000/svg">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path
+                                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z">
+                            </path>
+                        </svg></button>
+                </h2>
+                <div class="flex w-full flex-col gap-y-4 p-6">
+                    <div class="no-scrollbar flex max-h-[65vh] flex-col gap-y-2 overflow-auto">
+                        <div class="bg-black-700 flex flex-col gap-y-3 rounded-md p-4">
+                            <div class="text-white-800 flex items-center gap-x-4"><svg stroke="currentColor"
+                                    fill="currentColor" stroke-width="0" viewBox="0 0 24 24" aria-hidden="true"
+                                    height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd"
+                                        d="M15.97 2.47a.75.75 0 011.06 0l4.5 4.5a.75.75 0 010 1.06l-4.5 4.5a.75.75 0 11-1.06-1.06l3.22-3.22H7.5a.75.75 0 010-1.5h11.69l-3.22-3.22a.75.75 0 010-1.06zm-7.94 9a.75.75 0 010 1.06l-3.22 3.22H16.5a.75.75 0 010 1.5H4.81l3.22 3.22a.75.75 0 11-1.06 1.06l-4.5-4.5a.75.75 0 010-1.06l4.5-4.5a.75.75 0 011.06 0z"
+                                        clip-rule="evenodd"></path>
+                                </svg>Trade Spot &amp; Perpetuals</div>
+                            <div class="text-white-700 flex w-full text-xs">Trade spot on margin. Utilise leverage on
+                                perpetuals. Amplify exposure or hedge risk.</div>
+                        </div>
+                        <div class="bg-black-700 flex flex-col gap-y-3 rounded-md p-4">
+                            <div class="text-white-800 flex items-center gap-x-4"><svg stroke="currentColor" fill="none"
+                                    stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                                    height="20" width="20" xmlns="http://www.w3.org/2000/svg">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                                    <path d="M16 4h4v4"></path>
+                                    <path d="M15 9l5 -5"></path>
+                                    <path d="M4 20l5 -5"></path>
+                                    <path d="M16 20h4v-4"></path>
+                                    <path d="M4 4l16 16"></path>
+                                </svg>Universal Cross Margin</div>
+                            <div class="text-white-700 flex w-full text-xs">Manage one universal margin account.
+                                Maximise capital efficiency. No more switching between accounts.</div>
+                        </div>
+                        <div class="bg-black-700 flex flex-col gap-y-3 rounded-md p-4">
+                            <div class="text-white-800 flex items-center gap-x-4"><svg stroke="currentColor"
+                                    fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372zm47.7-395.2l-25.4-5.9V348.6c38 5.2 61.5 29 65.5 58.2.5 4 3.9 6.9 7.9 6.9h44.9c4.7 0 8.4-4.1 8-8.8-6.1-62.3-57.4-102.3-125.9-109.2V263c0-4.4-3.6-8-8-8h-28.1c-4.4 0-8 3.6-8 8v33c-70.8 6.9-126.2 46-126.2 119 0 67.6 49.8 100.2 102.1 112.7l24.7 6.3v142.7c-44.2-5.9-69-29.5-74.1-61.3-.6-3.8-4-6.6-7.9-6.6H363c-4.7 0-8.4 4-8 8.7 4.5 55 46.2 105.6 135.2 112.1V761c0 4.4 3.6 8 8 8h28.4c4.4 0 8-3.6 8-8.1l-.2-31.7c78.3-6.9 134.3-48.8 134.3-124-.1-69.4-44.2-100.4-109-116.4zm-68.6-16.2c-5.6-1.6-10.3-3.1-15-5-33.8-12.2-49.5-31.9-49.5-57.3 0-36.3 27.5-57 64.5-61.7v124zM534.3 677V543.3c3.1.9 5.9 1.6 8.8 2.2 47.3 14.4 63.2 34.4 63.2 65.1 0 39.1-29.4 62.6-72 66.4z">
+                                    </path>
+                                </svg>Earn &amp; Borrow </div>
+                            <div class="text-white-700 flex w-full text-xs">Automatically earn on all deposits. Borrow
+                                assets against your margin with multiple collateral types.</div>
+                        </div>
+                        <div class="bg-black-700 flex flex-col gap-y-3 rounded-md p-4">
+                            <div class="text-white-800 flex items-center gap-x-4"><svg stroke="currentColor"
+                                    fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z">
+                                    </path>
+                                    <path
+                                        d="M686.7 638.6L544.1 535.5V288c0-4.4-3.6-8-8-8H488c-4.4 0-8 3.6-8 8v275.4c0 2.6 1.2 5 3.3 6.5l165.4 120.6c3.6 2.6 8.6 1.8 11.2-1.7l28.6-39c2.6-3.7 1.8-8.7-1.8-11.2z">
+                                    </path>
+                                </svg>Speed</div>
+                            <div class="text-white-700 flex w-full text-xs">Trade as fast as on your favorite CEX.
+                                Benefit from order-matching latency of 10 - 30 milliseconds.</div>
+                        </div>
+                        <div class="bg-black-700 flex flex-col gap-y-3 rounded-md p-4">
+                            <div class="text-white-800 flex items-center gap-x-4"><svg stroke="currentColor"
+                                    fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024" height="20" width="20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M512 64L128 192v384c0 212.1 171.9 384 384 384s384-171.9 384-384V192L512 64zm312 512c0 172.3-139.7 312-312 312S200 748.3 200 576V246l312-110 312 110v330z">
+                                    </path>
+                                    <path
+                                        d="M378.4 475.1a35.91 35.91 0 0 0-50.9 0 35.91 35.91 0 0 0 0 50.9l129.4 129.4 2.1 2.1a33.98 33.98 0 0 0 48.1 0L730.6 434a33.98 33.98 0 0 0 0-48.1l-2.8-2.8a33.98 33.98 0 0 0-48.1 0L483 579.7 378.4 475.1z">
+                                    </path>
+                                </svg>Self Custody</div>
+                            <div class="text-white-700 flex w-full text-xs">Vertex is non-custodial. Only you have
+                                control over your assets. Take back control from CEXs.</div>
+                        </div>
+                    </div><button
+                        class="transition duration-200 inline-flex items-center justify-center whitespace-nowrap cursor-pointer px-5 py-2 text-sm bg-radial-gradient-purple hover:brightness-110 text-white-0 border-black-200 rounded border font-medium opacity-100">Connect
+                        Wallet</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--jquery-3.6.0 minified source-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+    <script src="./src/js/index.js"></script>
+</body>
+
+</html>
